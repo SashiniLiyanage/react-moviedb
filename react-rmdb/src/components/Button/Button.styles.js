@@ -1,23 +1,21 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Wrapper = styled.button`
-    display: block;
-    margin: 20px auto;
-    width: 25%;
-    min-width: 250px;
-    height: 40px;
-    color: var(--white);
-    background: var(--darkGrey);
-    text-align: center;
-    font-size: var(--fontBig);
-    border: 0;
-    border-radius:30px;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.3;
+  display: block;
+  background: var(--darkGrey);
+  width: 25%;
+  min-width: 200px;
+  height: 60px;
+  border-radius: 30px;
+  color: var(--white);
+  border: 0;
+  font-size: var(--fontBig);
+  margin: 20px auto;
+  transition: all 0.3s;
+  outline: none;
+  cursor: pointer;
 
-    :hover{
-        opacity: 0.8;
-    }
-
+  :hover {
+    opacity: 0.8;
+  }
 `;
