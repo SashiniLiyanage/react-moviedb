@@ -48,4 +48,5 @@ const MovieInfo = ({movie})=>(
 MovieInfo.propTypes = {
     movie: PropTypes.object
 }
+
 export default MovieInfo;
