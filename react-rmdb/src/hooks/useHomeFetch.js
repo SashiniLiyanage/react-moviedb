@@ -3,6 +3,9 @@ import {useState, useEffect, useRef} from 'react'
 // API
 import API from '../API'
 
+// Helpers
+import {isPersistentState} from '../helpers';
+
 const initialState={
     page:0,
     results:[],
@@ -39,6 +42,16 @@ export const useHomeFetch = () => {
 
     // Initial and search
     useEffect(()=>{
+
+        if(!searchTerm){
+            const sessionState = isPersistentState('homeState');
+            console.log("im here")
+            if(sessionState){
+                setState(sessionState)
+                return;
+            }
+        }
+
         setState(initialState)
         fetchMovies(1,searchTerm) 
     },[searchTerm])
@@ -52,6 +65,16 @@ export const useHomeFetch = () => {
 
     },[isLoadingMore, searchTerm, state.page])
 
+    // Write to session storage
+    useEffect(()=>{
+    if(!searchTerm) {
+        sessionStorage.setItem('homeState', JSON.stringify(state));
+        console.log('and here')
+        }
+    },[searchTerm,state])
+
+    
     return {state, loading, error, searchTerm, setSearchTerm, setIsLoadingMore}
 }
 
+ 
