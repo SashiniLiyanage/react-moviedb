@@ -45,7 +45,7 @@ export const useHomeFetch = () => {
 
         if(!searchTerm){
             const sessionState = isPersistentState('homeState');
-            console.log("im here")
+            
             if(sessionState){
                 setState(sessionState)
                 return;
@@ -69,7 +69,6 @@ export const useHomeFetch = () => {
     useEffect(()=>{
     if(!searchTerm) {
         sessionStorage.setItem('homeState', JSON.stringify(state));
-        console.log('and here')
         }
     },[searchTerm,state])
 

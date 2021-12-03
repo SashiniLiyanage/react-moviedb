@@ -13,6 +13,10 @@ export const GlobalStyle = createGlobalStyle`
         --fontSmall: 1rem;
     }
 
+    html {
+        height: 100%;
+    }
+
     *{
         box-sizing: border-box;
         font-family: 'Abel', sans-serif;
