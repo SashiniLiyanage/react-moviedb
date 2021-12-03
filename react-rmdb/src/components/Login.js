@@ -56,6 +56,7 @@ const Login = ()=>{
                     onChange={handleInput}
                     autoComplete='off'
                 />
+                <label>Password:</label>
                 <input
                     type='password'
                     value={password}
