@@ -14,7 +14,7 @@ import {Context} from '../../context';
 
 const Header = () => {
 
-    const [user] = useContext(Context);
+    const [user, setUser] = useContext(Context);
     return(
         <Wrapper>
         <Content>

@@ -29,13 +29,14 @@ const Login = ()=>{
             setUser({sessionId: sessionId.session_id, userName});
         
             console.log(sessionId);
-            
+            sessionStorage.setItem('rmdbSessionId', JSON.stringify({sessionId:sessionId.session_id,userName:userName}));
             navigate('/');
 
         }catch(error){
             setError(true);
         }
     };
+    
     const handleInput = e => {
         const name = e.currentTarget.name;
         const value = e.currentTarget.value;

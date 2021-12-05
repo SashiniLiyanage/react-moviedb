@@ -56,10 +56,12 @@ export const Text = styled.div`
     font-weight: 800;
     border-radius: 50%;
     margin: 0;
+    
   }
 
   .director {
     margin: 0 0 0 40px;
+    
 
     p {
       margin: 0;
@@ -70,5 +72,9 @@ export const Text = styled.div`
     @media screen and (max-width: 768px) {
       font-size: var(--fontBig);
     }
+  }
+
+  h3{
+    user-select: none;
   }
 `;

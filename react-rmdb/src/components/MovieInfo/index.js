@@ -24,7 +24,13 @@ const MovieInfo = ({movie})=>{
     const [user] = useContext(Context);
 
     const handleRating = async value=>{
-        const rate = await API.rateMovie(user.sessionId, movie.id, value); 
+        try{
+            const rate = await API.rateMovie(user.sessionId, movie.id, value);
+            console.log(rate)
+        }catch(error){
+            console.log(error)
+        }
+         
     }
 
     return(
@@ -55,7 +61,7 @@ const MovieInfo = ({movie})=>{
                 </div>
                 {user &&
                 <div>
-                    <p>Rate Movie</p>
+                    <h3>Rate Movie</h3>
                     <Rate callback={handleRating}/>
                 </div>}
             </Text>
