@@ -34,7 +34,8 @@ const Movie = () => {
     <>
       <BreadCrump movieTitle={movie.title}/>
       <MovieInfo movie={movie}/>
-      <MovieInfoBar time={movie.runtime} budget={movie.budget} revenue={movie.revenue}/>
+      {/* <MovieInfoBar time={movie.runtime} budget={movie.budget} revenue={movie.revenue}/> */}
+      <MovieInfoBar/>
       <Outlet movie={movie}/>
     </>
     

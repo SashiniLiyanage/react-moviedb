@@ -9,9 +9,8 @@ const Videos = () => {
             {movie.videokey.map((key,index)=>(
            <div key={index}>{key.key}</div>
           ))}
-        </div>
-        
-    )
+        </div>  
+    )   
 }
 
 export default Videos
