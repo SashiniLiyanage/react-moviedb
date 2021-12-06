@@ -15,6 +15,7 @@ const Actors = () => {
     const movie = JSON.parse(sessionStorage.getItem("movieData"))
     
     return (
+      
         <Grid header='Actors'>
         {movie.actors.map(actor=>(
           <Actor
@@ -27,8 +28,10 @@ const Actors = () => {
               : NoImage
             }
           />
+          
         ))}
     </Grid>
+    
     )
 }
 

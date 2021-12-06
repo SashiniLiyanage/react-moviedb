@@ -39,6 +39,9 @@ export const Text = styled.div`
   padding: 20px 40px;
   color: var(--white);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   .rating-directors {
     display: flex;

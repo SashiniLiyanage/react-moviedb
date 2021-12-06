@@ -44,9 +44,10 @@ const MovieInfo = ({movie})=>{
 
             <Text>
                 <h1>{movie.title}</h1>
+                <br/>
                 <h3>PLOT</h3>
                 <p>{movie.overview}</p>
-
+                <br/>
                 <div className="rating-directors">
                     <div>
                         <h3>RATING</h3>

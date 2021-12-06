@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  max-width: var(--maxWidth);
-  margin: 0 auto;
-  padding: 20px 20px;
+    padding: 20px 40px;
 
-  h1 {
+    h1 {
     color: var(--medGrey);
 
     @media screen and (max-width: 768px) {
@@ -15,7 +13,11 @@ export const Wrapper = styled.div`
 `;
 
 export const Content = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    width: 100%;
+    text-align: center;
+
 `;
+
