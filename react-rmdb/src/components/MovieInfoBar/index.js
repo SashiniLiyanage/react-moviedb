@@ -9,8 +9,7 @@ import {calcTime, convertMoney} from '../../helpers';
 import {Wrapper, Content, Tag} from './MovieInfoBar.styles'
 
 
-const MovieInfoBar = () => {
-    const  buttons=["actors","about","videos"]
+const MovieInfoBar = ({buttons}) => {
     const { movieId } = useParams();
     return(
         <Wrapper>

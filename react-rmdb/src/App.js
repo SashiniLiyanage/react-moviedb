@@ -11,6 +11,7 @@ import NotFound from './components/NotFound';
 import Login from './components/Login';
 import Actors from './components/Actors';
 import Videos from './components/Videos';
+import SimilarMovies from './components/SimilarMovies';
 
 // Context 
 import UserProvider from './context';
@@ -30,6 +31,7 @@ const App =() =>(
               <Route path='/:movieId/' element={ <Actors/> }/>
               <Route path='/:movieId/actors' element={ <Actors/> }/>
               <Route path='/:movieId/videos' element={ <Videos/> }/>
+              <Route path='/:movieId/similar%20movies' element={ <SimilarMovies/> }/>
           </Route>
           <Route path='/*' element={<NotFound/>}/>
         </Routes>
