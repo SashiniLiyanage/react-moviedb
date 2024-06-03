@@ -7,7 +7,7 @@ import{Image} from './Thumb.styles';
 const Thumb = ({image, movieId, clickable})=>(
     <div>
         {clickable ? (
-            <Link to={`/${movieId}`}>
+            <Link to={`/react-moviedb/${movieId}`}>
                 <Image src={image} alt='Movie-thumb'/>
             </Link>
         ) : <Image src={image} alt='Movie-thumb'/>}

@@ -21,23 +21,23 @@ import {GlobalStyle} from './GlobalStyle';
 
 const App =() =>(
  
-    <HashRouter>
+    <Router>
       <UserProvider>
         <Header/>
         <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/login' element={ <Login/>}/>
-          <Route path='/:movieId' element={<Movie/>}>
-              <Route path='/:movieId/' element={ <Actors/> }/>
-              <Route path='/:movieId/actors' element={ <Actors/> }/>
-              <Route path='/:movieId/videos' element={ <Videos/> }/>
-              <Route path='/:movieId/similar%20movies' element={ <SimilarMovies/> }/>
+          <Route path='/react-moviedb' element={<Home/>}/>
+          <Route path='/react-moviedb/login' element={ <Login/>}/>
+          <Route path='/react-moviedb/:movieId' element={<Movie/>}>
+              <Route path='/react-moviedb/:movieId/' element={ <Actors/> }/>
+              <Route path='/react-moviedb/:movieId/actors' element={ <Actors/> }/>
+              <Route path='/react-moviedb/:movieId/videos' element={ <Videos/> }/>
+              <Route path='/react-moviedb/:movieId/similar%20movies' element={ <SimilarMovies/> }/>
           </Route>
           <Route path='/*' element={<NotFound/>}/>
         </Routes>
         <GlobalStyle/>
       </UserProvider>
-    </HashRouter>
+    </Router>
   );
 
 export default App;

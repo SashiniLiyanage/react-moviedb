@@ -18,14 +18,14 @@ const Header = () => {
     return(
         <Wrapper>
         <Content>
-            <Link to='/'>
+            <Link to='/react-moviedb'>
                 <LogoImg src={RMDBLogo} alt='rmdb-logo'/>
             </Link>
             {user?(
                 <span className="loggedin">Logged in as: {user.userName}</span>
 
             ):(
-                <Link to='/login'>
+                <Link to='/react-moviedb/login'>
                     <span className='login'>Log in</span>
                 </Link>
             )}

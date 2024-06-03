@@ -30,7 +30,7 @@ const Login = ()=>{
         
             console.log(sessionId);
             sessionStorage.setItem('rmdbSessionId', JSON.stringify({sessionId:sessionId.session_id,userName:userName}));
-            navigate('/');
+            navigate('/react-moviedb');
 
         }catch(error){
             setError(true);

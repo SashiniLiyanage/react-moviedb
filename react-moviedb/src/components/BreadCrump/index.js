@@ -9,7 +9,7 @@ const BreadCrump = ({movieTitle}) => {
     return (
         <Wrapper>
             <Content>
-                <Link to='/'>
+                <Link to='/react-moviedb'>
                     <span>Home</span>
                 </Link>
                 <span>|</span>
