@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Routing
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, HashRouter} from 'react-router-dom';
 
 // Components
 import Header from './components/Header';
@@ -21,7 +21,7 @@ import {GlobalStyle} from './GlobalStyle';
 
 const App =() =>(
  
-    <Router>
+    <HashRouter>
       <UserProvider>
         <Header/>
         <Routes>
@@ -37,7 +37,7 @@ const App =() =>(
         </Routes>
         <GlobalStyle/>
       </UserProvider>
-    </Router>
+    </HashRouter>
   );
 
 export default App;
